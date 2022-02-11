@@ -1,0 +1,44 @@
+{
+    "audio":[
+        {
+            "title": "Knee Socks",
+            "artist": "Arctic Monkeys",
+            "img_url": "https://i.discogs.com/UCAAcvJybkr1Hf8z9vKJDkztEjPm0y6LqLuPoEK9jgI/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWltYWdlcy9SLTQ4/ODMwNjItMTQ3NDc1/NTMwOC0yODEwLmpw/ZWc.jpeg"
+        },
+        {
+            "title": "Take a Bow",
+            "artist": "Muse",
+            "img_url": "https://m.media-amazon.com/images/I/81RynTwX7VL._SL1425_.jpg"
+        },
+        {
+            "title": "",
+            "artist": "",
+            "img_url": ""
+        },
+        {
+            "title": "",
+            "artist": "",
+            "img_url": ""
+        },
+        {
+            "title": "",
+            "artist": "",
+            "img_url": ""
+        },
+        {
+            "title": "",
+            "artist": "",
+            "img_url": ""
+        },
+        {
+            "title": "",
+            "artist": "",
+            "img_url": ""
+        },
+        {
+            "title": "",
+            "artist": "",
+            "img_url": ""
+        }
+    ]
+}
