@@ -19,13 +19,14 @@ body{
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     header{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: $primary;
-        height: 10%;
 
         #containerBtns{
             width: 100%;
@@ -44,16 +45,41 @@ body{
     }
 
     main{
-        height: 89%;
+        flex-grow: 1;
+        display: flex;
         aside{
             border: solid 1px $bordes;
             width: 40%;
-            height: 100%;
             overflow: scroll;
             overflow-x: hidden;
-
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            #listaTracks{
+                height: 100%;
+                width: 100%;
+                border: solid 1px black;
+            }
+        }
+
+        #audioSection{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             
+            #trackEntero{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #videoSection{
+
         }
     }
 }
