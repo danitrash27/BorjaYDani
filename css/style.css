@@ -1,11 +1,18 @@
+* {
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body header {
@@ -23,6 +30,7 @@ body header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #CB8FEB;
+  height: 10%;
 }
 
 body header #containerBtns {
@@ -47,5 +55,17 @@ body header #containerBtns button {
   border: none;
   height: 50px;
   border: solid 1px #4B3B5A;
+}
+
+body main {
+  height: 89%;
+}
+
+body main aside {
+  border: solid 1px #4B3B5A;
+  width: 40%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */

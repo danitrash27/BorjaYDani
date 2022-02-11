@@ -4,14 +4,18 @@ $third: #CCC2D1;
 $bordes: #4B3B5A;
 $fondoLista: #958E99;
 
+*{box-sizing: 0;}
+
 html{
     margin:0;
     padding: 0;
+    height: 100%;
 }
 
 body{
     margin:0;
     padding: 0;
+    height: 100%;
 }
 
 body{
@@ -21,6 +25,7 @@ body{
         justify-content: center;
         align-items: center;
         background-color: $primary;
+        height: 10%;
 
         #containerBtns{
             width: 100%;
@@ -36,5 +41,19 @@ body{
             }
         }
 
+    }
+
+    main{
+        height: 89%;
+        aside{
+            border: solid 1px $bordes;
+            width: 40%;
+            height: 100%;
+            overflow: scroll;
+            overflow-x: hidden;
+
+            display: flex;
+            
+        }
     }
 }
