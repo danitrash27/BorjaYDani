@@ -1,1 +1,40 @@
-$primary: rgb(240,240,240);
+$primary: #CB8FEB;
+$secondary: #504C52;
+$third: #CCC2D1;
+$bordes: #4B3B5A;
+$fondoLista: #958E99;
+
+html{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+
+        #containerBtns{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            button{
+                width: 100%;
+                border: none;
+                height: 50px;
+                border: solid 1px $bordes;
+            }
+        }
+
+    }
+}
