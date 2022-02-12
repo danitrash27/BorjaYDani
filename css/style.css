@@ -3,7 +3,7 @@
           box-sizing: 0;
 }
 
-html {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -12,10 +12,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-}
-
-body {
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,8 +75,6 @@ body main {
 body main aside {
   border: solid 1px #4B3B5A;
   width: 40%;
-  overflow: scroll;
-  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,6 +94,94 @@ body main aside #listaTracks {
   height: 100%;
   width: 100%;
   border: solid 1px black;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+body main aside #listaTracks .no-seleccionado {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #958E99;
+  border-radius: 1em 1em;
+  cursor: pointer;
+}
+
+body main aside #listaTracks .no-seleccionado .divImg {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+body main aside #listaTracks .no-seleccionado .divImg img {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+body main aside #listaTracks .no-seleccionado .texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+body main aside #listaTracks .seleccionado {
+  background-color: #db3d4a;
+  color: white;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 1em 1em;
+  cursor: pointer;
+}
+
+body main aside #listaTracks .seleccionado .divImg {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+body main aside #listaTracks .seleccionado .divImg img {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+body main aside #listaTracks .seleccionado .texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
 }
 
 body main #audioSection {
@@ -127,5 +210,6 @@ body main #audioSection #trackEntero {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
