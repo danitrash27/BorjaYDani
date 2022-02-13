@@ -16,7 +16,9 @@ html,body{
 
 
 body{
-
+    background-image: url('../img/fondoClaro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     margin:0;
     padding: 0;
     min-height: 100%;
@@ -68,14 +70,18 @@ body{
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+                padding-top: 2rem;
 
                 .no-seleccionado{
-
                     padding: 1rem;
                     display: flex;
                     justify-content: space-between;
-                    background-color: $fondoLista;
                     border-radius: 1em 1em;
+                    background-color: $fondoLista;
+                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                    backdrop-filter: blur( 9.5px );
+                    border-radius: 10px;
+
                     cursor: pointer;
 
                     .divImg{
@@ -135,8 +141,17 @@ body{
             #trackEntero{
                 display: flex;
                 flex-direction: column;
-                padding-top: 8%;
+                padding-top: 5%;
                 align-items: center;
+                color: $colorLetraSeleccionado;
+                gap: 1rem;
+                
+                img{
+                    box-shadow: 0rem 0rem 2rem 0.5rem black;
+                }
+                h2{
+                    background-color: $fondoListaSeleccionado;
+                }
             }
         }  
     }
