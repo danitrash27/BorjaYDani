@@ -18,7 +18,7 @@ canciones.audio.forEach(function(e){
     divImg.classList.add("divImg");
     texto.classList.add("texto");
     cancion.classList.add("no-seleccionado")
-
+    
     divImg.appendChild(image);
     texto.appendChild(titulo);
     texto.appendChild(artista);
@@ -37,9 +37,9 @@ function mostrarEnReproductor(){
     let artista = document.getElementById("artista");
     let imgRep = document.getElementById("imgReproductor");
 
-    var texto = Array.from(this.lastElementChild.children);
     var image = this.firstElementChild.children;
     let link = image[0].src;
+    var texto = Array.from(this.lastElementChild.children);
 
     imgRep.src = link;
     titulo.textContent = texto[0].textContent;
@@ -59,17 +59,7 @@ function addSeleccion(elemento){
     elemento.classList.add("seleccionado");
 }
 
-var audioOn = document.getElementById("playAudio"); 
-var audioOff = document.getElementById("pauseAudio"); 
-var cancion = document.getElementById("cancionSeleccionada");
 
-audioOn.addEventListener('click', playAudio);
-audioOff.addEventListener('click', pauseAudio);
 
-function playAudio() { 
-  cancion.play(); 
-} 
 
-function pauseAudio() { 
-  cancion.pause(); 
-}
+
