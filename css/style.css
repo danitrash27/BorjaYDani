@@ -103,7 +103,7 @@ body main aside #tituloNav {
 }
 
 body main aside #listaTracks {
-  height: 100%;
+  overflow: scroll;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
