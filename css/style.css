@@ -76,7 +76,7 @@ body main {
 }
 
 body main aside {
-  border: solid 1px #4B3B5A;
+  border-right: solid 1px #4B3B5A;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,13 +91,20 @@ body main aside {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ccc2d1c5;
+  padding: 2rem;
+}
+
+body main aside #tituloNav {
+  background-color: #e29399;
+  width: 90%;
+  text-align: center;
+  border-radius: 1rem 1rem;
 }
 
 body main aside #listaTracks {
   height: 100%;
   width: 100%;
-  border: solid 1px black;
-  overflow: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,7 +113,7 @@ body main aside #listaTracks {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 body main aside #listaTracks .no-seleccionado {
@@ -118,7 +125,7 @@ body main aside #listaTracks .no-seleccionado {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 1em 1em;
-  background-color: #958E99;
+  background-color: #dfa2ff;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   -webkit-backdrop-filter: blur(9.5px);
@@ -154,7 +161,7 @@ body main aside #listaTracks .no-seleccionado .texto {
 }
 
 body main aside #listaTracks .seleccionado {
-  background-color: #db3d4a;
+  background-color: #db3d4ac4;
   color: white;
   padding: 1rem;
   display: -webkit-box;
@@ -226,9 +233,5 @@ body main #audioSection #trackEntero {
 body main #audioSection #trackEntero img {
   -webkit-box-shadow: 0rem 0rem 2rem 0.5rem black;
           box-shadow: 0rem 0rem 2rem 0.5rem black;
-}
-
-body main #audioSection #trackEntero h2 {
-  background-color: #db3d4a;
 }
 /*# sourceMappingURL=style.css.map */

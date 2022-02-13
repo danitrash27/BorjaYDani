@@ -1,10 +1,11 @@
 $primary: #CB8FEB;
 $secondary: #504C52;
-$third: #CCC2D1;
+$third: #ccc2d1c5;
 $bordes: #4B3B5A;
-$fondoLista: #958E99;
-$fondoListaSeleccionado: #db3d4a;
+$fondoLista: #dfa2ff;
+$fondoListaSeleccionado: #db3d4ac4;
 $colorLetraSeleccionado:  white;
+$tituloNav: #e29399;
 
 *{box-sizing: 0;}
 
@@ -54,23 +55,31 @@ body{
         display: flex;
 
         aside{
-            border: solid 1px $bordes;
+            border-right: solid 1px $bordes;
             width: 40%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: $third;
+            padding: 2rem;
+            
+
+            #tituloNav{
+                background-color: $tituloNav;
+                width: 90%;
+                text-align: center;
+                border-radius: 1rem 1rem;
+            }  
 
             #listaTracks{
                 
                 height: 100%;
                 width: 100%;
-                border: solid 1px black;
-                overflow: scroll;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
-                padding-top: 2rem;
+                padding: 2rem;
 
                 .no-seleccionado{
                     padding: 1rem;
@@ -145,12 +154,9 @@ body{
                 align-items: center;
                 color: $colorLetraSeleccionado;
                 gap: 1rem;
-                
+
                 img{
                     box-shadow: 0rem 0rem 2rem 0.5rem black;
-                }
-                h2{
-                    background-color: $fondoListaSeleccionado;
                 }
             }
         }  
