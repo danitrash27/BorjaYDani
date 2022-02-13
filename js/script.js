@@ -33,9 +33,18 @@ canciones.audio.forEach(function(e){
 
 function mostrarEnReproductor(){
     addSeleccion(this);
+    let titulo = document.getElementById("titulo");
+    let artista = document.getElementById("artista");
+    let imgRep = document.getElementById("imgReproductor");
 
-    /*AQUI ES DONDE CREAMOS EL REPRODUCTOR*/
+    var texto = Array.from(this.lastElementChild.children);
+    var image = this.firstElementChild.children;
+    let link = image[0].src;
 
+    imgRep.src = link;
+    titulo.textContent = texto[0].textContent;
+    artista.textContent = texto[1].textContent;
+    
 }
 
 function addSeleccion(elemento){
@@ -44,10 +53,23 @@ function addSeleccion(elemento){
         if(e.className == "seleccionado"){
             e.classList.remove("seleccionado");
             e.classList.add("no-seleccionado");
-        }else{
-
         }
     });
     elemento.classList.remove("no-seleccionado");
     elemento.classList.add("seleccionado");
+}
+
+var audioOn = document.getElementById("playAudio"); 
+var audioOff = document.getElementById("pauseAudio"); 
+var cancion = document.getElementById("cancionSeleccionada");
+
+audioOn.addEventListener('click', playAudio);
+audioOff.addEventListener('click', pauseAudio);
+
+function playAudio() { 
+  cancion.play(); 
+} 
+
+function pauseAudio() { 
+  cancion.pause(); 
 }

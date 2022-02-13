@@ -185,7 +185,6 @@ body main aside #listaTracks .seleccionado .texto {
 }
 
 body main #audioSection {
-  height: 100%;
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,9 +206,9 @@ body main #audioSection #trackEntero {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 8%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

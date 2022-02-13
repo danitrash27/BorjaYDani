@@ -127,7 +127,6 @@ body{
         }
 
         #audioSection{
-            height: 100%;
             width: 60%;
             display: flex;
             flex-direction: column;
@@ -136,8 +135,8 @@ body{
             #trackEntero{
                 display: flex;
                 flex-direction: column;
+                padding-top: 8%;
                 align-items: center;
-                gap: 2rem;
             }
         }  
     }

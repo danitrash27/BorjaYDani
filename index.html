@@ -21,13 +21,18 @@
             <h2>Tracks</h2>
             <div id="listaTracks"></div>
         </aside>
+        
         <section id="audioSection">
             <div id="trackEntero">
-                <h2>Titulo cancion</h2>
-                <h3>Cantante</h3>
-                <img src="" alt="" width="500" height="500">
+                <h2 id="titulo"></h2>
+                <h3 id="artista"></h3>
+                <img id="imgReproductor" src="./img/btnPlay.png" alt="" width="500" height="500">
                 <div id="botonesTrack">
-                    
+                    <button id="playAudio" type="button">Play Audio</button>
+                    <button id="pauseAudio" type="button">Pause Audio</button>
+                    <audio id="cancionSeleccionada">
+                        <source src="../../audio ts/grupo.mp3" type="audio/mp3">
+                    </audio>                   
                 </div>
             </div>
         </section>
