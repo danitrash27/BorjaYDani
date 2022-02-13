@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>BorDani Spotify Premium (Solo para ricos)</h1>
+        <h1>BorDani Spotify Premium (Solo para ricos,</h1>
         <div id="containerBtns">
             <button id="audioBtn">Audio</button>
             <button id="videoBtn">Video</button>
@@ -30,10 +30,11 @@
                 <h3 id="artista"></h3>
                 <img id="imgReproductor" src="" alt="" width="500" height="500">
                 <div id="botonesTrack">
-                    <audio controls id="audioSeleccionado">
-                        <source src="./tracks/Extremoduro_So Payaso.mp3" type="audio/mpeg">
-                        <source src="./tracks/Muse_Take a Bow.mp3" type="audio/mpeg">
-                        <source src="./tracks/ArcticMonkeys_Knee Socks.mp3" type="audio/mpeg">
+                    <audio controls autoplay id="audioSeleccionado">
+                        <source id="pistaAudio"></source>
+                        <!-- <source src="./tracks/Extremoduro_So Payaso.mp3">
+                        <source src="./tracks/Muse_Take a Bow.mp3">
+                        <source src="./tracks/ArcticMonkeys_Knee Socks.mp3"> -->
                         Tu navegador no soporta audio
                     </audio>                   
                 </div>

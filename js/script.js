@@ -17,7 +17,7 @@ canciones.audio.forEach(function(e){
 
     divImg.classList.add("divImg");
     texto.classList.add("texto");
-    cancion.classList.add("no-seleccionado")
+    cancion.classList.add("no-seleccionado");
     
     divImg.appendChild(image);
     texto.appendChild(titulo);
@@ -38,13 +38,45 @@ function mostrarEnReproductor(){
     let imgRep = document.getElementById("imgReproductor");
 
     var image = this.firstElementChild.children;
+    console.log(image);
     let link = image[0].src;
+    console.log(link);
     var texto = Array.from(this.lastElementChild.children);
+    console.log(texto);
 
     imgRep.src = link;
     titulo.textContent = texto[0].textContent;
     artista.textContent = texto[1].textContent;
-    
+
+    var listaCanciones = new Array();
+    var pista = document.getElementById("audioSeleccionado");
+    pista.innerHTML = '';
+
+    var primeraPista = document.createElement("source");
+    primeraPista.id = "pistaAudio";
+    pista.appendChild(primeraPista);
+
+    canciones.audio.forEach(function(e){
+        var tituloJson = e.title;
+        if(titulo.textContent == tituloJson){
+            var pistaAudio = document.getElementById("pistaAudio");
+            pistaAudio.src= e.url_track;
+        }else{
+            listaCanciones.push(e.url_track);
+        }
+    });
+
+ 
+    listaCanciones.forEach(function(e){
+
+        var reproductor = document.createElement("source");
+        reproductor.src = e;
+        pista.appendChild(reproductor);
+
+    })
+
+    document.getElementById("audioSeleccionado").load();
+    document.getElementById("audioSeleccionado").play();
 }
 
 function addSeleccion(elemento){

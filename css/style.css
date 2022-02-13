@@ -93,6 +93,8 @@ body main aside {
           align-items: center;
   background-color: #ccc2d1c5;
   padding: 2rem;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 body main aside #tituloNav {
@@ -100,10 +102,10 @@ body main aside #tituloNav {
   width: 90%;
   text-align: center;
   border-radius: 1rem 1rem;
+  height: 4%;
 }
 
 body main aside #listaTracks {
-  overflow: scroll;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,6 +116,8 @@ body main aside #listaTracks {
           flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  overflow: hidden;
+  height: 96%;
 }
 
 body main aside #listaTracks .no-seleccionado {

@@ -4,18 +4,21 @@
             "title": "Knee Socks",
             "artist": "Arctic Monkeys",
             "img_url": "https://i.discogs.com/UCAAcvJybkr1Hf8z9vKJDkztEjPm0y6LqLuPoEK9jgI/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWltYWdlcy9SLTQ4/ODMwNjItMTQ3NDc1/NTMwOC0yODEwLmpw/ZWc.jpeg",
-            "enlace": "./tracks/ArcticMonkeys_Knee Socks.mp3"
+            "enlace": "./tracks/ArcticMonkeys_Knee Socks.mp3",
+            "url_track": "./tracks/ArcticMonkeys_Knee Socks.mp3"
         },
         {
             "title": "Take a Bow",
             "artist": "Muse",
             "img_url": "https://m.media-amazon.com/images/I/81RynTwX7VL._SL1425_.jpg",
-            "enlace": "./tracks/Muse_Take a Bow.mp3"
+            "enlace": "./tracks/Muse_Take a Bow.mp3",
+            "url_track": "./tracks/Muse_Take a Bow.mp3"
         },
         {
             "title": "So Payaso",
             "artist": "Extremoduro",
-            "img_url": "https://m.media-amazon.com/images/I/916CNUltbUL._SS500_.jpg"
+            "img_url": "https://m.media-amazon.com/images/I/916CNUltbUL._SS500_.jpg",
+            "url_track": "./tracks/Extremoduro_So Payaso.mp3"
         },
         {
             "title": "Something",
