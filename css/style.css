@@ -3,7 +3,7 @@
           box-sizing: 0;
 }
 
-html, body {
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,10 +15,6 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -93,8 +89,6 @@ body main aside {
           align-items: center;
   background-color: #ccc2d1c5;
   padding: 2rem;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 
 body main aside #tituloNav {
@@ -125,8 +119,6 @@ body main aside #listaTracks {
           flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  overflow: hidden;
-  height: 96%;
 }
 
 body main aside #listaTracks .no-seleccionado {
@@ -248,27 +240,17 @@ body main #audioSection #trackEntero img {
           box-shadow: 0rem 0rem 2rem 0.5rem black;
 }
 
-body main #audioSection #trackEntero #botonesTrack audio:hover, body main #audioSection #trackEntero #botonesTrack audio:focus, body main #audioSection #trackEntero #botonesTrack audio:active {
-  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+body main #audioSection #trackEntero #botonesTrack #reproductor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
 }
 
-body main #audioSection #trackEntero #botonesTrack #randomBtn {
-  border-radius: 18px;
-}
-
-body main #audioSection #trackEntero #botonesTrack .randomNo {
-  background-color: white;
-}
-
-body main #audioSection #trackEntero #botonesTrack .randomSi {
-  background-color: #CB8FEB;
-}
-
-body main #audioSection #trackEntero #botonesTrack #randomBtn:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+body main #audioSection #trackEntero #botonesTrack #reproductor svg {
+  stroke: white;
+  fill: white;
+  width: 75px;
+  height: 75px;
 }
 /*# sourceMappingURL=style.css.map */

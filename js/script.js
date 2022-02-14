@@ -1,7 +1,14 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
+var tambody = document.getElementsByTagName('body');
+tambody[0].style.width = screen.width + "px";
+tambody[0].style.height = screen.height + "px";
+
 var menuCanciones = document.getElementById("listaTracks");
-var randomBtn = document.getElementById("randomBtn");
+var randomBtn = document.getElementById("btnRandom");
+var btnPause = document.getElementById("btnPause");
+var btnPlay = document.getElementById("btnPlay");
+
 randomBtn.addEventListener("click", function(){
     if(randomBtn.classList == "randomNo"){
         randomBtn.classList.remove("randomNo");
@@ -59,6 +66,27 @@ function mostrarEnReproductor(){
     titulo.textContent = texto[0].textContent;
     artista.textContent = texto[1].textContent;
 
+    btnPause.style.display = "block";
+    btnPlay.style.display = "none";
+
+    cancionON();
+    
+}
+
+function addSeleccion(elemento){
+    var lista = Array.from(menuCanciones.children);
+    lista.forEach(function(e){
+        if(e.className == "seleccionado"){
+            e.classList.remove("seleccionado");
+            e.classList.add("no-seleccionado");
+        }
+    });
+    elemento.classList.remove("no-seleccionado");
+    elemento.classList.add("seleccionado");
+}
+
+
+function cancionON(){
     var listaCanciones = new Array();
     var pista = document.getElementById("audioSeleccionado");
     pista.innerHTML = '';
@@ -90,19 +118,19 @@ function mostrarEnReproductor(){
     document.getElementById("audioSeleccionado").play();
 }
 
-function addSeleccion(elemento){
-    var lista = Array.from(menuCanciones.children);
-    lista.forEach(function(e){
-        if(e.className == "seleccionado"){
-            e.classList.remove("seleccionado");
-            e.classList.add("no-seleccionado");
-        }
-    });
-    elemento.classList.remove("no-seleccionado");
-    elemento.classList.add("seleccionado");
-}
 
 
 
+btnPause.addEventListener('click', function(){
+    document.getElementById("audioSeleccionado").pause();
+    btnPause.style.display = "none";
+    btnPlay.style.display = "block";
+});
 
+
+btnPlay.addEventListener('click', function(){
+    document.getElementById("audioSeleccionado").play();
+    btnPause.style.display = "block";
+    btnPlay.style.display = "none";
+});
 

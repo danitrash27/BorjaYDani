@@ -23,7 +23,14 @@
         {
             "title": "Something",
             "artist": "The Beatles",
-            "img_url": "https://los40es00.epimg.net/los40/imagenes/2018/09/26/los40classic/1537954405_106365_1569490515_noticia_normal.jpg"
+            "img_url": "https://los40es00.epimg.net/los40/imagenes/2018/09/26/los40classic/1537954405_106365_1569490515_noticia_normal.jpg",
+            "url_track": "./tracks/The Beatles_Something.mp3"
+        },
+        {
+            "title": "Toosie Slide",
+            "artist": "Drake",
+            "img_url": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg",
+            "url_track": "./tracks/Drake_Toosie_Slide.mp3"
         },
         {
             "title": "Toosie Slide",
