@@ -4,6 +4,9 @@ var tambody = document.getElementsByTagName('body');
 tambody[0].style.width = screen.width + "px";
 tambody[0].style.height = screen.height + "px";
 
+
+var prueba = 0;
+
 var menuCanciones = document.getElementById("listaTracks");
 var randomBtn = document.getElementById("btnRandom");
 var btnPause = document.getElementById("btnPause");
