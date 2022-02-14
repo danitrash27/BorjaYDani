@@ -15,10 +15,10 @@
             "url_track": "./tracks/Muse_Take a Bow.mp3"
         },
         {
-            "title": "So Payaso",
-            "artist": "Extremoduro",
-            "img_url": "https://m.media-amazon.com/images/I/916CNUltbUL._SS500_.jpg",
-            "url_track": "./tracks/Extremoduro_So Payaso.mp3"
+            "title": "Lucid Dreams",
+            "artist": "Juice WRLD",
+            "img_url": "https://lastfm.freetls.fastly.net/i/u/770x0/d472dd8a6c50599b58f4a4b83b0f17b7.jpg",
+            "url_track": "./tracks/JuiceWRLD_Lucid Dreams.mp3"
         },
         {
             "title": "Something",
@@ -26,24 +26,10 @@
             "img_url": "https://los40es00.epimg.net/los40/imagenes/2018/09/26/los40classic/1537954405_106365_1569490515_noticia_normal.jpg"
         },
         {
-            "title": "Toxicity",
-            "artist": "System of a Down",
-            "img_url": "https://i2.wp.com/www.scienceofnoise.net/wp-content/uploads/2021/08/system-of-a-down-toxicity-hd.jpg"
-        },
-        {
-            "title": "Summertime",
-            "artist": "Janis Joplin",
-            "img_url": "https://i.scdn.co/image/ab67616d0000b2737264d9b2e9610338bb9b98c0"
-        },
-        {
-            "title": "",
-            "artist": "",
-            "img_url": ""
-        },
-        {
-            "title": "",
-            "artist": "",
-            "img_url": ""
+            "title": "Toosie Slide",
+            "artist": "Drake",
+            "img_url": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg",
+            "url_track": "./tracks/Drake_Toosie_Slide.mp3"
         }
     ]
 }

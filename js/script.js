@@ -1,6 +1,17 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
 var menuCanciones = document.getElementById("listaTracks");
+var randomBtn = document.getElementById("randomBtn");
+randomBtn.addEventListener("click", function(){
+    if(randomBtn.classList == "randomNo"){
+        randomBtn.classList.remove("randomNo");
+        randomBtn.classList.add("randomSi");
+    }else{
+        randomBtn.classList.remove("randomSi");
+        randomBtn.classList.add("randomNo");
+    }
+
+})
 
 canciones.audio.forEach(function(e){
     var cancion = document.createElement('div');

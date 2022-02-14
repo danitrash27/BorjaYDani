@@ -103,6 +103,15 @@ body main aside #tituloNav {
   text-align: center;
   border-radius: 1rem 1rem;
   height: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main aside #listaTracks {
@@ -237,5 +246,29 @@ body main #audioSection #trackEntero {
 body main #audioSection #trackEntero img {
   -webkit-box-shadow: 0rem 0rem 2rem 0.5rem black;
           box-shadow: 0rem 0rem 2rem 0.5rem black;
+}
+
+body main #audioSection #trackEntero #botonesTrack audio:hover, body main #audioSection #trackEntero #botonesTrack audio:focus, body main #audioSection #trackEntero #botonesTrack audio:active {
+  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body main #audioSection #trackEntero #botonesTrack #randomBtn {
+  border-radius: 18px;
+}
+
+body main #audioSection #trackEntero #botonesTrack .randomNo {
+  background-color: white;
+}
+
+body main #audioSection #trackEntero #botonesTrack .randomSi {
+  background-color: #CB8FEB;
+}
+
+body main #audioSection #trackEntero #botonesTrack #randomBtn:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 /*# sourceMappingURL=style.css.map */
