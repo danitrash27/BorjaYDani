@@ -169,11 +169,24 @@ body{
                         gap: 1rem;
 
                         svg{
-                            stroke: $colorLetraSeleccionado;
-                            fill: $colorLetraSeleccionado;
                             width: 75px;
                             height: 75px;
-                        } 
+                        }
+                        
+                        svg:hover{
+                            transform: scale(1.2);
+                            
+                        }
+
+                        .noActivado{
+                            stroke: $colorLetraSeleccionado;
+                            fill: $colorLetraSeleccionado;
+                        }
+
+                        .activado{
+                            fill: red;
+                        }
+
                     }
                 }
             }

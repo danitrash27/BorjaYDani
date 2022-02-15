@@ -248,9 +248,21 @@ body main #audioSection #trackEntero #botonesTrack #reproductor {
 }
 
 body main #audioSection #trackEntero #botonesTrack #reproductor svg {
-  stroke: white;
-  fill: white;
   width: 75px;
   height: 75px;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor svg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor .noActivado {
+  stroke: white;
+  fill: white;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor .activado {
+  fill: red;
 }
 /*# sourceMappingURL=style.css.map */

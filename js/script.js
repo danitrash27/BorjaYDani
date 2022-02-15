@@ -11,17 +11,21 @@ var menuCanciones = document.getElementById("listaTracks");
 var randomBtn = document.getElementById("btnRandom");
 var btnPause = document.getElementById("btnPause");
 var btnPlay = document.getElementById("btnPlay");
+var btnStop = document.getElementById("Layer_1");
 
 randomBtn.addEventListener("click", function(){
-    if(randomBtn.classList == "randomNo"){
-        randomBtn.classList.remove("randomNo");
-        randomBtn.classList.add("randomSi");
+    if(randomBtn.classList == "noActivado"){
+        randomBtn.classList.remove("noActivado");
+        randomBtn.classList.add("activado");
+        randomizar();
     }else{
-        randomBtn.classList.remove("randomSi");
-        randomBtn.classList.add("randomNo");
+        randomBtn.classList.remove("activado");
+        randomBtn.classList.add("noActivado");
+        ordenar();
     }
 
 })
+
 
 canciones.audio.forEach(function(e){
     var cancion = document.createElement('div');
@@ -137,3 +141,16 @@ btnPlay.addEventListener('click', function(){
     btnPlay.style.display = "none";
 });
 
+//audio.currentTime = 0
+
+btnStop.addEventListener('click', function(){
+    var pista = document.getElementById("audioSeleccionado");
+    pista.pause();
+    pista.currentTime = 0;
+
+    if(btnPlay.style.display=="none"){
+        btnPlay.style.display="block";
+        btnPause.style.display="none";
+    }
+
+});
