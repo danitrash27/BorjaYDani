@@ -235,9 +235,15 @@ body main #audioSection #trackEntero {
   gap: 1rem;
 }
 
-body main #audioSection #trackEntero img {
+body main #audioSection #trackEntero #imgContainer {
   -webkit-box-shadow: 0rem 0rem 2rem 0.5rem black;
           box-shadow: 0rem 0rem 2rem 0.5rem black;
+  width: "500px";
+  height: "500px";
+}
+
+body main #audioSection #trackEntero #imgContainer img {
+  visibility: hidden;
 }
 
 body main #audioSection #trackEntero #botonesTrack #reproductor {
@@ -263,6 +269,10 @@ body main #audioSection #trackEntero #botonesTrack #reproductor .noActivado {
 }
 
 body main #audioSection #trackEntero #botonesTrack #reproductor .activado {
-  fill: red;
+  fill: lightgreen;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #Layer_1:active {
+  fill: lightgreen;
 }
 /*# sourceMappingURL=style.css.map */

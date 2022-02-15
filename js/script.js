@@ -5,8 +5,6 @@ tambody[0].style.width = screen.width + "px";
 tambody[0].style.height = screen.height + "px";
 
 
-var prueba = 0;
-
 var menuCanciones = document.getElementById("listaTracks");
 var randomBtn = document.getElementById("btnRandom");
 var btnPause = document.getElementById("btnPause");
@@ -61,6 +59,9 @@ function mostrarEnReproductor(){
     let titulo = document.getElementById("titulo");
     let artista = document.getElementById("artista");
     let imgRep = document.getElementById("imgReproductor");
+    var img = document.getElementById("imgReproductor");
+
+    img.style.visibility = "visible";
 
     var image = this.firstElementChild.children;
     console.log(image);

@@ -157,8 +157,12 @@ body{
                 color: $colorLetraSeleccionado;
                 gap: 1rem;
 
-                img{
+                #imgContainer{
                     box-shadow: 0rem 0rem 2rem 0.5rem black;
+                    width:"500px" ;
+                    height:"500px";
+
+                    img{visibility:hidden;}
                 }
 
                 #botonesTrack{
@@ -184,7 +188,11 @@ body{
                         }
 
                         .activado{
-                            fill: red;
+                            fill: lightgreen;
+                        }
+
+                        #Layer_1:active{
+                            fill: lightgreen;
                         }
 
                     }
