@@ -1,9 +1,5 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
-var tambody = document.getElementsByTagName('body');
-tambody[0].style.width = screen.width + "px";
-tambody[0].style.height = screen.height + "px";
-
 
 var menuCanciones = document.getElementById("listaTracks");
 var randomBtn = document.getElementById("btnRandom");
