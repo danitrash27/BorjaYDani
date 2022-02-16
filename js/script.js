@@ -11,6 +11,11 @@ var btnPause = document.getElementById("btnPause");
 var btnPlay = document.getElementById("btnPlay");
 var btnStop = document.getElementById("Layer_1");
 
+var btnMasVolumen = document.getElementById("volumenMas");
+var btnMenosVolumen = document.getElementById("volumenMenos");
+btnMasVolumen.addEventListener("click", subirVolumen);
+btnMenosVolumen.addEventListener("click", bajarVolumen);
+
 randomBtn.addEventListener("click", function(){
     if(randomBtn.classList == "noActivado"){
         randomBtn.classList.remove("noActivado");
@@ -60,6 +65,8 @@ function mostrarEnReproductor(){
     let artista = document.getElementById("artista");
     let imgRep = document.getElementById("imgReproductor");
     var img = document.getElementById("imgReproductor");
+    var volumenes = document.getElementById("containerVolumen");
+
 
     img.style.visibility = "visible";
 
@@ -76,6 +83,8 @@ function mostrarEnReproductor(){
 
     btnPause.style.display = "block";
     btnPlay.style.display = "none";
+
+    volumenes.style.display = "flex";
 
     cancionON();
     
@@ -155,3 +164,29 @@ btnStop.addEventListener('click', function(){
     }
 
 });
+
+
+
+function subirVolumen(){
+    var audio = document.getElementById("audioSeleccionado");
+    var spanVolumen = document.getElementById("porcentajeVolumen");
+    var volumenActual = audio.volume;
+    if(volumenActual <= 1){
+        audio.volume = volumenActual + 0.10;
+        audio.volume = audio.volume.toFixed(2)
+        spanVolumen.innerText = audio.volume*100 + '%';
+    }
+
+}
+
+function bajarVolumen(){
+    var audio = document.getElementById("audioSeleccionado");
+    var spanVolumen = document.getElementById("porcentajeVolumen");
+    var volumenActual = audio.volume;
+    if(volumenActual > 0){
+        audio.volume = volumenActual - 0.10;
+        audio.volume = audio.volume.toFixed(2)
+        spanVolumen.innerText = audio.volume*100 + '%';
+        console.log(audio.volume);
+    }
+}

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borja y Dani - Audio y Video</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -36,12 +40,6 @@
                         Tu navegador no soporta audio
                     </audio>  
                     <div id="reproductor"> 
-                        <svg version="1.1" class="noActivado" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <path d="M272,0h-48L80,160H32c-17.672,0-32,14.326-32,32v128c0,17.672,14.328,32,32,32h48l144,160h48c8.836,0,16-7.164,16-16V16
-                                C288,7.164,280.836,0,272,0z"/>
-                            <path d="M480,224H352c-17.672,0-32,14.328-32,32s14.328,32,32,32h128c17.672,0,32-14.328,32-32S497.672,224,480,224z"/>
-                        </svg>
                         <svg display="none" id="btnPlay" class="noActivado" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512" height="512" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
                             <circle cx="64" cy="64" r="64"/>
                             <path d="M115.061,102.578L99.605,64.253c-0.028-0.159-0.08-0.314-0.158-0.468   c-0.073-0.522-0.396-1.032-1.004-1.429L45.462,27.644c-1.38-0.904-2.509-0.294-2.509,1.356v0.512v0.512V99v0.512V100l10.796,27.172   C57.088,127.71,60.51,128,64,128C84.855,128,103.376,118.02,115.061,102.578z"/>
@@ -62,13 +60,30 @@
                             <path d="m24.983 8.539v-2.485h-4.902l-3.672 5.945-2.099 3.414-3.24 5.256c-.326.51-.889.844-1.53.845h-9.54v-3.568h8.538l3.673-5.946 2.099-3.414 3.24-5.256c.325-.509.886-.843 1.525-.845h5.904v-2.485l7.417 4.27-7.417 4.27z"/>
                             <path d="m12.902 6.316-.63 1.022-1.468 2.39-2.265-3.675h-8.538v-3.568h9.54c.641.001 1.204.335 1.526.838l.004.007 1.836 2.985z"/><path d="m24.983 24v-2.485h-5.904c-.639-.002-1.201-.336-1.521-.838l-.004-.007-1.836-2.985.63-1.022 1.468-2.39 2.264 3.675h4.902v-2.485l7.417 4.27-7.417 4.27z"/>
                         </svg>
-                        <svg version="1.1" id="Capa_1" class="noActivado" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+
+
+                        <fieldset id="containerVolumen" style="display: none;">
+                            <legend>Ajusta el volumen</legend>
+
+                            <svg version="1.1" class="noActivado" id="volumenMenos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <path d="M272,0h-48L80,160H32c-17.672,0-32,14.326-32,32v128c0,17.672,14.328,32,32,32h48l144,160h48c8.836,0,16-7.164,16-16V16
+                                C288,7.164,280.836,0,272,0z"/>
+                            <path d="M480,224H352c-17.672,0-32,14.328-32,32s14.328,32,32,32h128c17.672,0,32-14.328,32-32S497.672,224,480,224z"/>
+                            </svg>
+
+                            <span id="porcentajeVolumen">100%</span>
+
+                            <svg version="1.1" id="volumenMas" class="noActivado" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                             <path d="M272,0h-48L80,160H32c-17.672,0-32,14.326-32,32v128c0,17.672,14.328,32,32,32h48l144,160h48c8.836,0,16-7.164,16-16V16
                                 C288,7.164,280.836,0,272,0z"/>
                             <path d="M480,224h-32v-32c0-17.672-14.328-32-32-32s-32,14.328-32,32v32h-32c-17.672,0-32,14.328-32,32s14.328,32,32,32h32v32
                                 c0,17.672,14.328,32,32,32s32-14.328,32-32v-32h32c17.672,0,32-14.328,32-32S497.672,224,480,224z"/>
-                        </svg>
+                            </svg>
+
+                        </fieldset>
+
                     </div>           
                 </div>
             </div>

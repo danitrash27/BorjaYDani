@@ -7,6 +7,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
 body {
@@ -250,7 +251,13 @@ body main #audioSection #trackEntero #botonesTrack #reproductor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
 }
 
 body main #audioSection #trackEntero #botonesTrack #reproductor svg {
@@ -274,5 +281,51 @@ body main #audioSection #trackEntero #botonesTrack #reproductor .activado {
 
 body main #audioSection #trackEntero #botonesTrack #reproductor #Layer_1:active {
   fill: lightgreen;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #containerVolumen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 15px;
+  -webkit-box-shadow: -5px -5px 30px 5px #CB8FEB, 5px 5px 30px 5px #e29399;
+          box-shadow: -5px -5px 30px 5px #CB8FEB, 5px 5px 30px 5px #e29399;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #containerVolumen legend {
+  background-color: #e29399;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  -webkit-box-shadow: -1px 1px 1px black;
+          box-shadow: -1px 1px 1px black;
+  margin: 0 auto;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #containerVolumen span {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #containerVolumen #volumenMenos {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #containerVolumen #volumenMas:active {
+  fill: lightgreen;
+}
+
+body main #audioSection #trackEntero #botonesTrack #reproductor #containerVolumen #volumenMenos:active {
+  fill: red;
 }
 /*# sourceMappingURL=style.css.map */

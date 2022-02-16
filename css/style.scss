@@ -13,6 +13,7 @@ html{
     margin:0;
     padding: 0;
     height: 100%;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
 
@@ -170,7 +171,9 @@ body{
                     #reproductor{
 
                         display: flex;
-                        gap: 1rem;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
 
                         svg{
                             width: 75px;
@@ -193,6 +196,43 @@ body{
 
                         #Layer_1:active{
                             fill: lightgreen;
+                        }
+
+                        #containerVolumen{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            border-radius: 15px;
+                            box-shadow: -5px -5px 30px 5px $primary, 5px 5px 30px 5px $tituloNav;
+
+                            legend{
+                                background-color: $tituloNav;
+                                padding: 10px;
+                                font-size: 15px;
+                                color: white;
+                                text-shadow: 1px 1px 1px black;
+                                box-shadow: -1px 1px 1px black;
+                                margin:0 auto; //ponerlo en el medio
+                              }
+
+                            span{
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                font-size: 25px;
+                            }
+
+                            #volumenMenos{
+                                transform: scaleX(-1);
+                            }
+
+                            #volumenMas:active{
+                                fill: lightgreen;
+                            }
+
+                            #volumenMenos:active{
+                                fill: red;
+                            }
                         }
 
                     }
