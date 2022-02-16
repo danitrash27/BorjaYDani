@@ -9,20 +9,15 @@ $tituloNav: #e29399;
 
 *{box-sizing: 0;}
 
-html{
-    margin:0;
+html, body{
+    margin: 0;
     padding: 0;
-    height: 100%;
 }
-
 
 body{
     background-image: url('../img/fondoClaro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin:0;
-    padding: 0;
-    flex-direction: column;
 
     header{
         display: flex;
@@ -50,48 +45,33 @@ body{
 
     main{
 
-        flex-grow: 1;
         display: flex;
-
+        
         aside{
             border-right: solid 1px $bordes;
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: $third;
-            padding: 2rem;           
-            
+            background-color: $third;         
+            flex-basis: 32%;
+
             #tituloNav{
                 background-color: $tituloNav;
-                width: 90%;
-                text-align: center;
                 border-radius: 1rem 1rem;
-                height: 4%;
-                display:flex;
-                justify-content: center;
-                align-items: center;
+                text-align: center;
             }  
 
             #listaTracks{
-                width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
-                padding: 2rem;
-                
-
+                gap: 1rem;
+                padding: 1rem;
                 .no-seleccionado{
-                    padding: 1rem;
-                    display: flex;
-                    justify-content: space-between;
                     border-radius: 1em 1em;
                     background-color: $fondoLista;
                     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                     backdrop-filter: blur( 9.5px );
                     border-radius: 10px;
-
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: space-between;
                     cursor: pointer;
 
                     .divImg{
@@ -144,24 +124,19 @@ body{
         }
 
         #audioSection{
-            width: 60%;
+            flex-basis: 68%;
             display: flex;
             flex-direction: column;
             align-items: center;
-
             #trackEntero{
                 display: flex;
                 flex-direction: column;
-                padding-top: 5%;
+                justify-content: center;
                 align-items: center;
                 color: $colorLetraSeleccionado;
-                gap: 1rem;
-
+                gap: 1.5rem;
                 #imgContainer{
                     box-shadow: 0rem 0rem 2rem 0.5rem black;
-                    width:"500px" ;
-                    height:"500px";
-
                     img{visibility:hidden;}
                 }
 

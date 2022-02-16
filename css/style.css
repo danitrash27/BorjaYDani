@@ -3,22 +3,15 @@
           box-sizing: 0;
 }
 
-html {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body {
   background-image: url("../img/fondoClaro.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
-  padding: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 body header {
@@ -63,9 +56,6 @@ body header #containerBtns button {
 }
 
 body main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,43 +63,18 @@ body main {
 
 body main aside {
   border-right: solid 1px #4B3B5A;
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #ccc2d1c5;
-  padding: 2rem;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
 }
 
 body main aside #tituloNav {
   background-color: #e29399;
-  width: 90%;
-  text-align: center;
   border-radius: 1rem 1rem;
-  height: 4%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
 }
 
 body main aside #listaTracks {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,18 +82,11 @@ body main aside #listaTracks {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 body main aside #listaTracks .no-seleccionado {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-radius: 1em 1em;
   background-color: #dfa2ff;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -136,6 +94,13 @@ body main aside #listaTracks .no-seleccionado {
   -webkit-backdrop-filter: blur(9.5px);
           backdrop-filter: blur(9.5px);
   border-radius: 10px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
 }
 
@@ -206,7 +171,8 @@ body main aside #listaTracks .seleccionado .texto {
 }
 
 body main #audioSection {
-  width: 60%;
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,19 +193,19 @@ body main #audioSection #trackEntero {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 body main #audioSection #trackEntero #imgContainer {
   -webkit-box-shadow: 0rem 0rem 2rem 0.5rem black;
           box-shadow: 0rem 0rem 2rem 0.5rem black;
-  width: "500px";
-  height: "500px";
 }
 
 body main #audioSection #trackEntero #imgContainer img {
