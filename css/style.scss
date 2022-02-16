@@ -9,15 +9,21 @@ $tituloNav: #e29399;
 
 *{box-sizing: 0;}
 
-html, body{
-    margin: 0;
+html{
+    margin:0;
     padding: 0;
+    height: 100%;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
+
 
 body{
     background-image: url('../img/fondoClaro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    margin:0;
+    padding: 0;
+    flex-direction: column;
 
     header{
         display: flex;
@@ -45,33 +51,48 @@ body{
 
     main{
 
+        flex-grow: 1;
         display: flex;
-        
+
         aside{
             border-right: solid 1px $bordes;
-            background-color: $third;         
-            flex-basis: 32%;
-
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $third;
+            padding: 2rem;           
+            
             #tituloNav{
                 background-color: $tituloNav;
-                border-radius: 1rem 1rem;
+                width: 90%;
                 text-align: center;
+                border-radius: 1rem 1rem;
+                height: 4%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
             }  
 
             #listaTracks{
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
+                gap: 2rem;
+                padding: 2rem;
+                
+
                 .no-seleccionado{
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: space-between;
                     border-radius: 1em 1em;
                     background-color: $fondoLista;
                     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                     backdrop-filter: blur( 9.5px );
                     border-radius: 10px;
-                    padding: 1rem;
-                    display: flex;
-                    justify-content: space-between;
+
                     cursor: pointer;
 
                     .divImg{
@@ -124,19 +145,24 @@ body{
         }
 
         #audioSection{
-            flex-basis: 68%;
+            width: 60%;
             display: flex;
             flex-direction: column;
             align-items: center;
+
             #trackEntero{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                padding-top: 5%;
                 align-items: center;
                 color: $colorLetraSeleccionado;
-                gap: 1.5rem;
+                gap: 1rem;
+
                 #imgContainer{
                     box-shadow: 0rem 0rem 2rem 0.5rem black;
+                    width:"500px" ;
+                    height:"500px";
+
                     img{visibility:hidden;}
                 }
 
@@ -145,7 +171,9 @@ body{
                     #reproductor{
 
                         display: flex;
-                        gap: 1rem;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
 
                         svg{
                             width: 75px;
@@ -168,6 +196,43 @@ body{
 
                         #Layer_1:active{
                             fill: lightgreen;
+                        }
+
+                        #containerVolumen{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            border-radius: 15px;
+                            box-shadow: -5px -5px 30px 5px $primary, 5px 5px 30px 5px $tituloNav;
+
+                            legend{
+                                background-color: $tituloNav;
+                                padding: 10px;
+                                font-size: 15px;
+                                color: white;
+                                text-shadow: 1px 1px 1px black;
+                                box-shadow: -1px 1px 1px black;
+                                margin:0 auto; //ponerlo en el medio
+                              }
+
+                            span{
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                font-size: 25px;
+                            }
+
+                            #volumenMenos{
+                                transform: scaleX(-1);
+                            }
+
+                            #volumenMas:active{
+                                fill: lightgreen;
+                            }
+
+                            #volumenMenos:active{
+                                fill: red;
+                            }
                         }
 
                     }
