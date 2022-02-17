@@ -26,13 +26,17 @@ function verAudio(){
     if(audioSection.style.display == "none"){
         audioSection.style.display = "block";
         videoSection.style.display = "none";
+        document.getElementById("videoTag").pause();
     }
 }
 
 function verVideo(){
     if(videoSection.style.display == "none"){
-        videoSection.style.display = "block";
+        videoSection.style.display = "flex";
         audioSection.style.display = "none";
+        document.getElementById("audioSeleccionado").pause();
+        document.getElementById("videoTag").load();
+        document.getElementById("videoTag").play();
     }
 }
 
@@ -82,7 +86,9 @@ canciones.audio.forEach(function(e){
 function mostrarEnReproductor(){
     addSeleccion(this);
     let titulo = document.getElementById("titulo");
+    let tituloVideo = document.getElementById("tituloVideo");
     let artista = document.getElementById("artista");
+    let artistaVideo = document.getElementById("artistaVideo");
     let imgRep = document.getElementById("imgReproductor");
     var img = document.getElementById("imgReproductor");
     var volumenes = document.getElementById("containerVolumen");
@@ -91,15 +97,16 @@ function mostrarEnReproductor(){
     img.style.visibility = "visible";
 
     var image = this.firstElementChild.children;
-    console.log(image);
+
     let link = image[0].src;
-    console.log(link);
+
     var texto = Array.from(this.lastElementChild.children);
-    console.log(texto);
 
     imgRep.src = link;
     titulo.textContent = texto[0].textContent;
+    tituloVideo.textContent = texto[0].textContent;
     artista.textContent = texto[1].textContent;
+    artistaVideo.textContent = texto[1].textContent;
 
     btnPause.style.display = "block";
     btnPlay.style.display = "none";
@@ -107,7 +114,6 @@ function mostrarEnReproductor(){
     volumenes.style.display = "flex";
 
     cancionON();
-    
 }
 
 function addSeleccion(elemento){
@@ -124,35 +130,58 @@ function addSeleccion(elemento){
 
 
 function cancionON(){
+    document.getElementById("videoEntero").style.display = "flex";
     var listaCanciones = new Array();
     var pista = document.getElementById("audioSeleccionado");
+    var pistaVideo = document.getElementById("videoTag");
+    pistaVideo.innerHTML = '';
     pista.innerHTML = '';
-
     var primeraPista = document.createElement("source");
-    primeraPista.id = "pistaAudio";
-    pista.appendChild(primeraPista);
 
     canciones.audio.forEach(function(e){
         var tituloJson = e.title;
         if(titulo.textContent == tituloJson){
-            var pistaAudio = document.getElementById("pistaAudio");
-            pistaAudio.src= e.url_track;
+            if(audioSection.style.display == "block"){
+                
+                primeraPista.id = "pistaAudio";
+                pista.appendChild(primeraPista);
+                var pistaAudio = document.getElementById("pistaAudio");
+                pistaAudio.src= e.url_track;
+
+                var videoPrimeraPista = document.createElement("source");
+                videoPrimeraPista.id = "sourceVideo";
+                videoPrimeraPista.type = "video/mp4";
+                videoPrimeraPista.setAttribute('poster', e.img_url);
+                videoPrimeraPista.src = e.url_video;
+                document.getElementById("videoTag").appendChild(videoPrimeraPista);
+                document.getElementById("videoTag").pause();
+                
+                document.getElementById("audioSeleccionado").classList.add("autoplay");
+                document.getElementById("audioSeleccionado").load();
+                document.getElementById("audioSeleccionado").play();
+            }else{
+                var videoPrimeraPista = document.createElement("source");
+                videoPrimeraPista.id = "sourceVideo";
+                videoPrimeraPista.type = "video/mp4";
+                videoPrimeraPista.setAttribute('poster', e.img_url);
+                videoPrimeraPista.src = e.url_video;
+                document.getElementById("videoTag").appendChild(videoPrimeraPista);
+                document.getElementById("videoTag").load();
+                document.getElementById("videoTag").play();
+            }
+
         }else{
             listaCanciones.push(e.url_track);
         }
     });
 
  
+    
     listaCanciones.forEach(function(e){
-
         var reproductor = document.createElement("source");
         reproductor.src = e;
         pista.appendChild(reproductor);
-
     })
-
-    document.getElementById("audioSeleccionado").load();
-    document.getElementById("audioSeleccionado").play();
 }
 
 

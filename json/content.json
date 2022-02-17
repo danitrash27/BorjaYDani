@@ -5,38 +5,37 @@
             "artist": "Arctic Monkeys",
             "img_url": "https://i.discogs.com/UCAAcvJybkr1Hf8z9vKJDkztEjPm0y6LqLuPoEK9jgI/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWltYWdlcy9SLTQ4/ODMwNjItMTQ3NDc1/NTMwOC0yODEwLmpw/ZWc.jpeg",
             "enlace": "./tracks/ArcticMonkeys_Knee Socks.mp3",
-            "url_track": "./tracks/ArcticMonkeys_Knee Socks.mp3"
+            "url_track": "./tracks/ArcticMonkeys_Knee Socks.mp3",
+            "url_video": "./video/Arctic Monkeys - Knee Socks.mp4"
         },
         {
             "title": "Take a Bow",
             "artist": "Muse",
             "img_url": "https://m.media-amazon.com/images/I/81RynTwX7VL._SL1425_.jpg",
             "enlace": "./tracks/Muse_Take a Bow.mp3",
-            "url_track": "./tracks/Muse_Take a Bow.mp3"
+            "url_track": "./tracks/Muse_Take a Bow.mp3",
+            "url_video": "./video/Muse - Take a Bow.mp4"
         },
         {
             "title": "Lucid Dreams",
             "artist": "Juice WRLD",
             "img_url": "https://lastfm.freetls.fastly.net/i/u/770x0/d472dd8a6c50599b58f4a4b83b0f17b7.jpg",
-            "url_track": "./tracks/JuiceWRLD_Lucid Dreams.mp3"
+            "url_track": "./tracks/JuiceWRLD_Lucid Dreams.mp3",
+            "url_video": "./video/Juice WRLD - Lucid Dreams.mp4"
         },
         {
             "title": "Something",
             "artist": "The Beatles",
             "img_url": "https://los40es00.epimg.net/los40/imagenes/2018/09/26/los40classic/1537954405_106365_1569490515_noticia_normal.jpg",
-            "url_track": "./tracks/The Beatles_Something.mp3"
+            "url_track": "./tracks/The Beatles_Something.mp3",
+            "url_video": "./video/The Beatles - Something.mp4"
         },
         {
             "title": "Toosie Slide",
             "artist": "Drake",
             "img_url": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg",
-            "url_track": "./tracks/Drake_Toosie_Slide.mp3"
-        },
-        {
-            "title": "Toosie Slide",
-            "artist": "Drake",
-            "img_url": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg",
-            "url_track": "./tracks/Drake_Toosie_Slide.mp3"
+            "url_track": "./tracks/Drake_Toosie_Slide.mp3",
+            "url_video": "./video/Drake - Toosie Slide.mp4"
         }
     ]
 }

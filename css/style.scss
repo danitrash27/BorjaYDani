@@ -238,6 +238,48 @@ body{
                     }
                 }
             }
-        }  
+        } 
+        
+        #videoSection{
+            
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #videoEntero{
+
+                display: flex;
+                flex-direction: column;
+                padding-top: 5%;
+                align-items: center;
+                color: $colorLetraSeleccionado;
+                gap: 1rem;
+
+                #tituloVideo{
+                    color: white;
+                }
+
+                #containerVideo{
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 5%;
+                    align-items: center;
+                    justify-content: center;
+                    color: $colorLetraSeleccionado;
+                    gap: 1rem;
+    
+                    #videoTag{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+                }
+
+            }
+
+        }
+
     }
 }

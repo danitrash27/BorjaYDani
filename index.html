@@ -26,7 +26,7 @@
             </div>        
             <div id="listaTracks"></div>
         </aside>
-        <section id="audioSection">
+        <section style="display: block;" id="audioSection">
             <div id="trackEntero">
                 <h2 id="titulo"></h2>
                 <h3 id="artista"></h3>
@@ -88,7 +88,23 @@
             </div>
         </section>
     
-        <section id="videoSection" style="display: none;"></section>
+        <section id="videoSection" style="display: none;">
+        
+            
+            <div style="display: none;" id="videoEntero">
+                <h2 style="color: white;" id="tituloVideo"></h2>
+                <h3 style="color: white;" id="artistaVideo"></h3>
+                <div id="containerVideo">
+
+                    <video autoplay id="videoTag" width="800" controls>
+                        <source id="sourceVideo" type="video/mp4" poster="https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg">
+                        Tu navegador no admite el elemento HTML video.
+                    </video>
+                </div>
+            </div>
+            
+        
+        </section>
     </main>
 
     <script type="application/json" src="./json/content.json"></script>
