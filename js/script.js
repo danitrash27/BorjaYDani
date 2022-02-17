@@ -1,6 +1,9 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
 
+var audioBtn = document.getElementById("audioBtn");
+var videoBtn = document.getElementById("videoBtn");
+
 var menuCanciones = document.getElementById("listaTracks");
 var randomBtn = document.getElementById("btnRandom");
 var btnPause = document.getElementById("btnPause");
@@ -9,8 +12,29 @@ var btnStop = document.getElementById("Layer_1");
 
 var btnMasVolumen = document.getElementById("volumenMas");
 var btnMenosVolumen = document.getElementById("volumenMenos");
+
+var audioSection = document.getElementById("audioSection");
+var videoSection = document.getElementById("videoSection");
+
 btnMasVolumen.addEventListener("click", subirVolumen);
 btnMenosVolumen.addEventListener("click", bajarVolumen);
+
+audioBtn.addEventListener("click", verAudio);
+videoBtn.addEventListener("click", verVideo);
+
+function verAudio(){
+    if(audioSection.style.display == "none"){
+        audioSection.style.display = "block";
+        videoSection.style.display = "none";
+    }
+}
+
+function verVideo(){
+    if(videoSection.style.display == "none"){
+        videoSection.style.display = "block";
+        audioSection.style.display = "none";
+    }
+}
 
 randomBtn.addEventListener("click", function(){
     if(randomBtn.classList == "noActivado"){
