@@ -160,8 +160,8 @@ body{
 
                 #imgContainer{
                     box-shadow: 0rem 0rem 2rem 0.5rem black;
-                    width:"500px" ;
-                    height:"500px";
+                    width:"450px" ;
+                    height:"450px";
 
                     img{visibility:hidden;}
                 }
@@ -270,9 +270,8 @@ body{
                     gap: 1rem;
     
                     #videoTag{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        border: solid 2px $primary;
+                        box-shadow: -5px -5px 30px 5px $primary, 5px 5px 30px 5px black;
                     }
     
                 }

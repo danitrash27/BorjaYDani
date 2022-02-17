@@ -9,12 +9,11 @@
             "url_video": "./video/Arctic Monkeys - Knee Socks.mp4"
         },
         {
-            "title": "Take a Bow",
-            "artist": "Muse",
-            "img_url": "https://m.media-amazon.com/images/I/81RynTwX7VL._SL1425_.jpg",
-            "enlace": "./tracks/Muse_Take a Bow.mp3",
-            "url_track": "./tracks/Muse_Take a Bow.mp3",
-            "url_video": "./video/Muse - Take a Bow.mp4"
+            "title": "Toosie Slide",
+            "artist": "Drake",
+            "img_url": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg",
+            "url_track": "./tracks/Drake_Toosie_Slide.mp3",
+            "url_video": "./video/Drake - Toosie Slide.mp4"
         },
         {
             "title": "Lucid Dreams",
@@ -31,11 +30,12 @@
             "url_video": "./video/The Beatles - Something.mp4"
         },
         {
-            "title": "Toosie Slide",
-            "artist": "Drake",
-            "img_url": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg",
-            "url_track": "./tracks/Drake_Toosie_Slide.mp3",
-            "url_video": "./video/Drake - Toosie Slide.mp4"
+            "title": "Take a Bow",
+            "artist": "Muse",
+            "img_url": "https://m.media-amazon.com/images/I/81RynTwX7VL._SL1425_.jpg",
+            "enlace": "./tracks/Muse_Take a Bow.mp3",
+            "url_track": "./tracks/Muse_Take a Bow.mp3",
+            "url_video": "./video/Muse - Take a Bow.mp4"
         }
     ]
 }

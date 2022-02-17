@@ -239,8 +239,8 @@ body main #audioSection #trackEntero {
 body main #audioSection #trackEntero #imgContainer {
   -webkit-box-shadow: 0rem 0rem 2rem 0.5rem black;
           box-shadow: 0rem 0rem 2rem 0.5rem black;
-  width: "500px";
-  height: "500px";
+  width: "450px";
+  height: "450px";
 }
 
 body main #audioSection #trackEntero #imgContainer img {
@@ -383,14 +383,8 @@ body main #videoSection #videoEntero #containerVideo {
 }
 
 body main #videoSection #videoEntero #containerVideo #videoTag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: solid 2px #CB8FEB;
+  -webkit-box-shadow: -5px -5px 30px 5px #CB8FEB, 5px 5px 30px 5px black;
+          box-shadow: -5px -5px 30px 5px #CB8FEB, 5px 5px 30px 5px black;
 }
 /*# sourceMappingURL=style.css.map */
