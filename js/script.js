@@ -1,5 +1,6 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
+
 var visualizacion = document.getElementById("modoVisualizado");
 var boton = visualizacion.firstElementChild.firstElementChild;
 var todoBody = document.getElementsByTagName("body");
@@ -188,7 +189,18 @@ function cancionON(){
                 videoPrimeraPista.type = "video/mp4";
                 videoPrimeraPista.setAttribute('poster', e.img_url);
                 videoPrimeraPista.src = e.url_video;
+                
+
+                var subtitulo =  document.createElement('track');
+                subtitulo.src = "../subtitulo/video-arctic.vtt";
+                subtitulo.kind = "captions";
+                subtitulo.lang = "es";
+                subtitulo.label = "Español";
+
+                //<track kind="subtitles" src="./subtitulo/video-arctic.vtt" lang="es" label="Español">
+                
                 document.getElementById("videoTag").appendChild(videoPrimeraPista);
+                document.getElementById("videoTag").appendChild(subtitulo);
                 document.getElementById("videoTag").load();
                 document.getElementById("videoTag").play();
             }
@@ -214,15 +226,9 @@ btnPause.addEventListener('click', function(){
 });
 
 btnPlay.addEventListener('click', function(){
-    document.getElementById("audioSeleccionado").play();
+    document.getElementById("videoTag").play();
     btnPause.style.display = "block";
     btnPlay.style.display = "none";
-});
-
-btnPauseVid.addEventListener('click', function(){
-    document.getElementById("videoTag").pause();
-    btnPauseVid.style.display = "none";
-    btnPlayVid.style.display = "block";
 });
 
 btnPlayVid.addEventListener('click', function(){
@@ -231,17 +237,11 @@ btnPlayVid.addEventListener('click', function(){
     btnPlayVid.style.display = "none";
 });
 
-avanzarFlecha.addEventListener('click', function(){
-    var videoPista = document.getElementById("videoTag");
-    videoPista.currentTime = videoPista.currentTime + 10;
+btnPauseVid.addEventListener('click', function(){
+    document.getElementById("videoTag").pause();
+    btnPauseVid.style.display = "none";
+    btnPlayVid.style.display = "block";
 });
-
-atrasFlecha.addEventListener('click', function(){
-    var videoPista = document.getElementById("videoTag");
-    videoPista.currentTime = videoPista.currentTime - 10;
-});
-
-//video.currentTime(video.currentTime() + 10);
 
 btnStop.addEventListener('click', function(){
     var pista = document.getElementById("audioSeleccionado");
@@ -255,6 +255,13 @@ btnStop.addEventListener('click', function(){
 
 });
 
+atrasFlecha.addEventListener('click', function(){
+    document.getElementById("videoTag").currentTime = document.getElementById("videoTag").currentTime - 10;
+});
+
+avanzarFlecha.addEventListener('click', function(){
+    document.getElementById("videoTag").currentTime = document.getElementById("videoTag").currentTime + 10;
+});
 
 
 function subirVolumen(){
@@ -277,6 +284,5 @@ function bajarVolumen(){
         audio.volume = volumenActual - 0.10;
         audio.volume = audio.volume.toFixed(2)
         spanVolumen.innerText = audio.volume*100 + '%';
-        console.log(audio.volume);
     }
 }
