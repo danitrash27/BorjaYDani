@@ -298,6 +298,34 @@ body{
                         border: solid 2px $primary;
                         box-shadow: -5px -5px 30px 5px $primary, 5px 5px 30px 5px black;
                     }
+
+                    #reproductorVideo{
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+
+                        #btnPauseVideo{
+                            width: 75px;
+                            height: 75px;
+                        }
+
+                        #btnPlayVideo{
+                            fill: white;
+                            width: 75px;
+                            height: 75px;
+                        }
+                        
+                        svg:hover{
+                            transform: scale(1.2);
+                        }
+
+                        .noActivado{
+                            stroke: $colorLetraSeleccionado;
+                            fill: $colorLetraSeleccionado;
+                        }
+                    }
     
                 }
 
@@ -415,11 +443,23 @@ body{
                 color: $colorLetraSeleccionado;
                 #containerVideo{
                     color: $colorLetraSeleccionado;
+
+
                     #videoTag{
                         border: solid 2px $colorLetraSeleccionado;
                         box-shadow: -5px -5px 30px 5px $secondary, 5px 5px 30px 5px $colorLetraSeleccionado;
                     }
     
+                    #reproductorVideo{
+
+                        #atrasFlecha{
+                            fill: white;
+                        }
+
+                        #avanzarFlecha{
+                            fill: white;
+                        }
+                    }
                 }
 
             }

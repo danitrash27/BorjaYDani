@@ -411,6 +411,40 @@ body main #videoSection #videoEntero #containerVideo #videoTag {
           box-shadow: -5px -5px 30px 5px #CB8FEB, 5px 5px 30px 5px black;
 }
 
+body main #videoSection #videoEntero #containerVideo #reproductorVideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+body main #videoSection #videoEntero #containerVideo #reproductorVideo #btnPauseVideo {
+  width: 75px;
+  height: 75px;
+}
+
+body main #videoSection #videoEntero #containerVideo #reproductorVideo #btnPlayVideo {
+  fill: white;
+  width: 75px;
+  height: 75px;
+}
+
+body main #videoSection #videoEntero #containerVideo #reproductorVideo svg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body main #videoSection #videoEntero #containerVideo #reproductorVideo .noActivado {
+  stroke: white;
+  fill: white;
+}
+
 .oscuro {
   background-image: url("../img/fondoOscuro.jpg");
   background-repeat: no-repeat;
@@ -506,5 +540,13 @@ body main #videoSection #videoEntero #containerVideo #videoTag {
   border: solid 2px white;
   -webkit-box-shadow: -5px -5px 30px 5px #504C52, 5px 5px 30px 5px white;
           box-shadow: -5px -5px 30px 5px #504C52, 5px 5px 30px 5px white;
+}
+
+.oscuro main #videoSection #videoEntero #containerVideo #reproductorVideo #atrasFlecha {
+  fill: white;
+}
+
+.oscuro main #videoSection #videoEntero #containerVideo #reproductorVideo #avanzarFlecha {
+  fill: white;
 }
 /*# sourceMappingURL=style.css.map */
