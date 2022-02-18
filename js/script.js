@@ -1,5 +1,6 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
+
 var visualizacion = document.getElementById("modoVisualizado");
 var boton = visualizacion.firstElementChild.firstElementChild;
 var todoBody = document.getElementsByTagName("body");
@@ -181,7 +182,18 @@ function cancionON(){
                 videoPrimeraPista.type = "video/mp4";
                 videoPrimeraPista.setAttribute('poster', e.img_url);
                 videoPrimeraPista.src = e.url_video;
+                
+
+                var subtitulo =  document.createElement('track');
+                subtitulo.src = "../subtitulo/video-arctic.vtt";
+                subtitulo.kind = "captions";
+                subtitulo.lang = "es";
+                subtitulo.label = "Español";
+
+                //<track kind="subtitles" src="./subtitulo/video-arctic.vtt" lang="es" label="Español">
+                
                 document.getElementById("videoTag").appendChild(videoPrimeraPista);
+                document.getElementById("videoTag").appendChild(subtitulo);
                 document.getElementById("videoTag").load();
                 document.getElementById("videoTag").play();
             }
@@ -216,7 +228,6 @@ btnPlay.addEventListener('click', function(){
     btnPlay.style.display = "none";
 });
 
-//audio.currentTime = 0
 
 btnStop.addEventListener('click', function(){
     var pista = document.getElementById("audioSeleccionado");
@@ -252,6 +263,5 @@ function bajarVolumen(){
         audio.volume = volumenActual - 0.10;
         audio.volume = audio.volume.toFixed(2)
         spanVolumen.innerText = audio.volume*100 + '%';
-        console.log(audio.volume);
     }
 }
