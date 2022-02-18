@@ -31,7 +31,7 @@ body{
         justify-content: center;
         align-items: center;
         background-color: $primary;
-
+        gap: 0.5rem;
         #containerBtns{
             width: 100%;
             display: flex;
@@ -46,6 +46,31 @@ body{
                 border: solid 1px $bordes;
             }
         }
+
+        #modoVisualizado{
+            #switchBoton{
+                cursor: pointer;
+                height: 20px;
+                width: 40px;
+                border: solid 1px $colorLetraSeleccionado;
+                border-radius: 0.3em 0.3em;
+                background-color: $secondary;
+                position: relative;
+
+                #boton{
+                    height: 18px;
+                    width: 18px;
+                    background-color: $fondoListaSeleccionado;
+                    border-radius: 0.3em 0.3em;
+                    border: solid 1px $primary;
+                    position: absolute;
+                    left: 0px;
+                    transition: 0.2s linear;
+                }
+
+            }
+        }
+
 
     }
 
@@ -272,6 +297,127 @@ body{
                     #videoTag{
                         border: solid 2px $primary;
                         box-shadow: -5px -5px 30px 5px $primary, 5px 5px 30px 5px black;
+                    }
+    
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
+.oscuro{
+    background-image: url('../img/fondoOscuro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    header{
+        background-color: $secondary;
+        color: $colorLetraSeleccionado;
+
+        #modoVisualizado{
+            #switchBoton{
+                cursor: pointer;
+                height: 20px;
+                width: 40px;
+                border: solid 1px $colorLetraSeleccionado;
+                border-radius: 0.3em 0.3em;
+                background-color: $secondary;
+                position: relative;
+
+                #boton{
+                    height: 18px;
+                    width: 18px;
+                    background-color: $colorLetraSeleccionado;
+                    border-radius: 0.3em 0.3em;
+                    border: solid 1px black;
+                }
+
+            }
+        }
+
+    }
+
+
+    main{
+        #tituloNav{
+
+            background-color: $bordes;
+            color: $colorLetraSeleccionado;
+            
+        }
+
+        #listaTracks{
+            .no-seleccionado{
+
+                background-color: $colorLetraSeleccionado;
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 9.5px );
+                cursor: pointer;
+                
+            }
+
+            .seleccionado{
+                background-color: $third;
+                color: $colorLetraSeleccionado;
+            }
+
+
+        }
+
+        #audioSection{
+
+            #trackEntero{
+                color: $colorLetraSeleccionado;
+
+                #imgContainer{
+                    box-shadow: 0rem 0rem 2rem 0.5rem $colorLetraSeleccionado;
+                }
+
+                #botonesTrack{
+
+                    #reproductor{
+
+                        .noActivado{
+                            stroke: $colorLetraSeleccionado;
+                            fill: $colorLetraSeleccionado;
+                        }
+
+                        .activado{
+                            fill: lightgreen;
+                        }
+
+                        #Layer_1:active{
+                            fill: lightgreen;
+                        }
+
+                        #containerVolumen{
+                            box-shadow: -5px -5px 30px 5px gray, 5px 5px 30px 5px $colorLetraSeleccionado;
+
+                            legend{
+                                background-color: $secondary;
+                                color: white;
+                                text-shadow: 1px 1px 1px black;
+                                box-shadow: -1px 1px 1px black;
+                              }
+                        }
+                    }
+                }
+            }
+        }
+            
+        #videoSection{
+
+            #videoEntero{
+                color: $colorLetraSeleccionado;
+                #containerVideo{
+                    color: $colorLetraSeleccionado;
+                    #videoTag{
+                        border: solid 2px $colorLetraSeleccionado;
+                        box-shadow: -5px -5px 30px 5px $secondary, 5px 5px 30px 5px $colorLetraSeleccionado;
                     }
     
                 }

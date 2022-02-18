@@ -1,5 +1,21 @@
 import canciones from "../json/content.json" assert { type: "json" };
 
+var visualizacion = document.getElementById("modoVisualizado");
+var boton = visualizacion.firstElementChild.firstElementChild;
+var todoBody = document.getElementsByTagName("body");
+
+visualizacion.addEventListener('click', function(){
+
+    if(boton.style.left == "" || boton.style.left == "0px"){
+        boton.style.left = "20px";
+        todoBody[0].classList.add("oscuro");
+        localStorage.setItem("modoOscuro", "dark");
+    }else{
+        boton.style.left = "0px";
+        todoBody[0].classList.remove("oscuro");
+        delete localStorage.modoOscuro;
+    }
+})
 
 var audioBtn = document.getElementById("audioBtn");
 var videoBtn = document.getElementById("videoBtn");
