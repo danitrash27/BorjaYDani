@@ -19,10 +19,11 @@
                 <div id="boton"></div>
             </div>
         </div>
+        <!--
         <div id="containerBtns">
             <button id="audioBtn">Audio</button>
             <button id="videoBtn">Video</button>
-        </div>
+        </div> -->
     </header>
     <main>
         <aside>
@@ -31,8 +32,16 @@
             </div>        
             <div id="listaTracks"></div>
         </aside>
+
+
         <section style="display: block;" id="audioSection">
             <div id="trackEntero">
+                
+                <div class="containerBtns">
+                    <div id="audioBtn" class="audioSeleccionado">Audio</div>
+                    <div id="videoBtn">Ir a Video</div>
+                </div>
+
                 <h2 id="titulo"></h2>
                 <h3 id="artista"></h3>
                 <div id="imgContainer">
@@ -96,8 +105,14 @@
         
             
             <div style="display: none;" id="videoEntero">
-                <h2 style="color: white;" id="tituloVideo"></h2>
-                <h3 style="color: white;" id="artistaVideo"></h3>
+                
+                <div class="containerBtns">
+                    <div id="audioBtnVid">Volver a Audio</div>
+                    <div id="videoBtnVid" class="audioSeleccionado">Video</div>
+                </div>
+
+                <h2 id="tituloVideo"></h2>
+                <h3 id="artistaVideo"></h3>
                 <div id="containerVideo">
                     <video autoplay id="videoTag" width="800">
                         <source id="sourceVideo" type="video/mp4" poster="https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/d/4/4/5/887961588590273.jpg">
@@ -128,6 +143,26 @@
                             <label style="font-size: 1.4rem; font-weight: bold;">+10</label>
                         </div>
                         
+                        <fieldset id="containerVolumenVid" style="display: flex;">
+                            <legend>Ajusta el volumen</legend>
+
+                            <svg version="1.1" id="volumenMenosVid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <path d="M272,0h-48L80,160H32c-17.672,0-32,14.326-32,32v128c0,17.672,14.328,32,32,32h48l144,160h48c8.836,0,16-7.164,16-16V16
+                                C288,7.164,280.836,0,272,0z"/>
+                            <path d="M480,224H352c-17.672,0-32,14.328-32,32s14.328,32,32,32h128c17.672,0,32-14.328,32-32S497.672,224,480,224z"/>
+                            </svg>
+
+                            <span id="porcentajeVolumenVid">100%</span>
+
+                            <svg version="1.1" id="volumenMasVid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <path d="M272,0h-48L80,160H32c-17.672,0-32,14.326-32,32v128c0,17.672,14.328,32,32,32h48l144,160h48c8.836,0,16-7.164,16-16V16
+                                C288,7.164,280.836,0,272,0z"/>
+                            <path d="M480,224h-32v-32c0-17.672-14.328-32-32-32s-32,14.328-32,32v32h-32c-17.672,0-32,14.328-32,32s14.328,32,32,32h32v32
+                                c0,17.672,14.328,32,32,32s32-14.328,32-32v-32h32c17.672,0,32-14.328,32-32S497.672,224,480,224z"/>
+                            </svg>
+                        </fieldset>
                         
                     </div> 
                 </div>

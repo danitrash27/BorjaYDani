@@ -32,20 +32,6 @@ body{
         align-items: center;
         background-color: $primary;
         gap: 0.5rem;
-        #containerBtns{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            button{
-                width: 100%;
-                border: none;
-                height: 50px;
-                border: solid 1px $bordes;
-            }
-        }
 
         #modoVisualizado{
             #switchBoton{
@@ -56,6 +42,7 @@ body{
                 border-radius: 0.3em 0.3em;
                 background-color: $secondary;
                 position: relative;
+                margin-bottom: 10px;
 
                 #boton{
                     height: 18px;
@@ -178,10 +165,49 @@ body{
             #trackEntero{
                 display: flex;
                 flex-direction: column;
-                padding-top: 5%;
+                padding-top: 0;
                 align-items: center;
                 color: $colorLetraSeleccionado;
                 gap: 1rem;
+
+                
+                .containerBtns{
+                    font-size: 25px;
+
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    width: 100%;
+                    height: 10%;
+                    justify-content: center;
+                    justify-content: space-around;
+
+                    background: rgba( 255, 255, 255, 0.2 );
+                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                    backdrop-filter: blur( 8px );
+                    -webkit-backdrop-filter: blur( 8px );
+                    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+                     
+                    #audioBtn{
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    #videoBtn{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .audioSeleccionado{
+                        background-color: $fondoListaSeleccionado;
+                    }
+                }
 
                 #imgContainer{
                     box-shadow: 0rem 0rem 2rem 0.5rem black;
@@ -276,10 +302,50 @@ body{
 
                 display: flex;
                 flex-direction: column;
-                padding-top: 5%;
+                width: 100%;
+                padding-top: 0;
                 align-items: center;
                 color: $colorLetraSeleccionado;
                 gap: 1rem;
+
+                .containerBtns{
+                    font-size: 25px;
+
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    width: 100%;
+                    height: 10%;
+                    justify-content: center;
+                    justify-content: space-around;
+
+                    background: rgba( 255, 255, 255, 0.2 );
+                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                    backdrop-filter: blur( 8px );
+                    -webkit-backdrop-filter: blur( 8px );
+                    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+                     
+                    #audioBtnVid{
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    #videoBtnVid{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .audioSeleccionado{
+                        background-color: $fondoListaSeleccionado;
+                    }
+                }
+        
 
                 #tituloVideo{
                     color: white;
@@ -324,6 +390,54 @@ body{
                         .noActivado{
                             stroke: $colorLetraSeleccionado;
                             fill: $colorLetraSeleccionado;
+                        }
+
+                        #containerVolumenVid{
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            border-radius: 15px;
+                            box-shadow: -5px -5px 30px 5px $primary, 5px 5px 30px 5px $tituloNav;
+
+                            legend{
+                                background-color: $tituloNav;
+                                padding: 10px;
+                                font-size: 15px;
+                                color: white;
+                                text-shadow: 1px 1px 1px black;
+                                box-shadow: -1px 1px 1px black;
+                                margin:0 auto; //ponerlo en el medio
+                              }
+
+                            span{
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                font-size: 25px;
+                            }
+
+                            #volumenMenosVid{
+                                transform: scaleX(-1);
+                            }
+
+                            #volumenMasVid:active{
+                                fill: lightgreen;
+                            }
+
+                            #volumenMenos:active{
+                                fill: red;
+                            }
+
+                            #volumenMenosVid{
+                                stroke: $colorLetraSeleccionado;
+                                fill: $colorLetraSeleccionado;
+                            }
+
+                            #volumenMasVid{
+                                stroke: $colorLetraSeleccionado;
+                                fill: $colorLetraSeleccionado;
+                            }
                         }
                     }
     
@@ -401,6 +515,15 @@ body{
             #trackEntero{
                 color: $colorLetraSeleccionado;
 
+                .containerBtns{
+                    
+                    .audioSeleccionado{background-color: $third;}
+
+                }
+                
+                #titulo{color:#dfa2ff}
+                #artista{color:#dfa2ff}
+
                 #imgContainer{
                     box-shadow: 0rem 0rem 2rem 0.5rem $colorLetraSeleccionado;
                 }
@@ -441,6 +564,16 @@ body{
 
             #videoEntero{
                 color: $colorLetraSeleccionado;
+
+                .containerBtns{
+                    
+                    .audioSeleccionado{background-color: $third;}
+
+                } 
+
+                #tituloVideo{color:#dfa2ff}
+                #artistaVideo{color:#dfa2ff}
+
                 #containerVideo{
                     color: $colorLetraSeleccionado;
 
@@ -458,6 +591,20 @@ body{
 
                         #avanzarFlecha{
                             fill: white;
+                        }
+
+                        #containerVolumenVid{
+
+                            box-shadow: -5px -5px 30px 5px gray, 5px 5px 30px 5px $colorLetraSeleccionado;
+
+                            legend{
+                                background-color: $secondary;
+                                color: white;
+                                text-shadow: 1px 1px 1px black;
+                                box-shadow: -1px 1px 1px black;
+                              }
+
+
                         }
                     }
                 }

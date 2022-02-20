@@ -21,6 +21,9 @@ visualizacion.addEventListener('click', function(){
 var audioBtn = document.getElementById("audioBtn");
 var videoBtn = document.getElementById("videoBtn");
 
+var audioBtnVid = document.getElementById("audioBtnVid");
+var videoBtnVid = document.getElementById("videoBtnVid");
+
 var menuCanciones = document.getElementById("listaTracks");
 var randomBtn = document.getElementById("btnRandom");
 
@@ -37,25 +40,25 @@ var btnStop = document.getElementById("Layer_1");
 var btnMasVolumen = document.getElementById("volumenMas");
 var btnMenosVolumen = document.getElementById("volumenMenos");
 
+var volumenMasVid = document.getElementById("volumenMasVid");
+var volumenMenosVid = document.getElementById("volumenMenosVid");
+
+volumenMasVid.addEventListener("click", subirVolumenVid);
+volumenMenosVid.addEventListener("click", bajarVolumenVid);
+
 var audioSection = document.getElementById("audioSection");
 var videoSection = document.getElementById("videoSection");
 
 btnMasVolumen.addEventListener("click", subirVolumen);
 btnMenosVolumen.addEventListener("click", bajarVolumen);
 
-audioBtn.addEventListener("click", verAudio);
 videoBtn.addEventListener("click", verVideo);
+audioBtnVid.addEventListener("click", verAudioVid);
 
-function verAudio(){
-    if(audioSection.style.display == "none"){
-        audioSection.style.display = "block";
-        videoSection.style.display = "none";
-        document.getElementById("videoTag").pause();
-    }
-}
 
 function verVideo(){
     if(videoSection.style.display == "none"){
+        document.getElementById("videoEntero").style.display = "flex";
         videoSection.style.display = "flex";
         audioSection.style.display = "none";
         document.getElementById("audioSeleccionado").pause();
@@ -63,6 +66,17 @@ function verVideo(){
         document.getElementById("videoTag").play();
     }
 }
+
+function verAudioVid(){
+    if(audioSection.style.display == "none"){
+        audioSection.style.display = "block";
+        videoSection.style.display = "none";
+        btnPause.style.display = "none";
+        btnPlay.style.display = "block";
+        document.getElementById("videoTag").pause();
+    }
+}
+
 
 randomBtn.addEventListener("click", function(){
     if(randomBtn.classList == "noActivado"){
@@ -226,7 +240,7 @@ btnPause.addEventListener('click', function(){
 });
 
 btnPlay.addEventListener('click', function(){
-    document.getElementById("videoTag").play();
+    document.getElementById("audioSeleccionado").play();
     btnPause.style.display = "block";
     btnPlay.style.display = "none";
 });
@@ -285,4 +299,27 @@ function bajarVolumen(){
         audio.volume = audio.volume.toFixed(2)
         spanVolumen.innerText = audio.volume*100 + '%';
     }
+}
+
+function bajarVolumenVid(){
+    var videoSeleccionado = document.getElementById("videoTag");
+    var spanVolumen = document.getElementById("porcentajeVolumenVid");
+    var volumenActual = videoSeleccionado.volume;
+    if(volumenActual > 0){
+        videoSeleccionado.volume = volumenActual - 0.10;
+        videoSeleccionado.volume = videoSeleccionado.volume.toFixed(2)
+        spanVolumen.innerText = videoSeleccionado.volume*100 + '%';
+    }
+}
+
+function subirVolumenVid(){
+    var videoSeleccionado = document.getElementById("videoTag");
+    var spanVolumen = document.getElementById("porcentajeVolumenVid");
+    var volumenActual = videoSeleccionado.volume;
+    if(volumenActual <= 1){
+        videoSeleccionado.volume = volumenActual + 0.10;
+        videoSeleccionado.volume = videoSeleccionado.volume.toFixed(2)
+        spanVolumen.innerText = videoSeleccionado.volume*100 + '%';
+    }
+
 }
