@@ -290,6 +290,45 @@ function subirVolumen(){
 
 }
 
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if(audioSection.style.display == "block"){
+        //Flecha Izquierda en Audio
+        if (e.keyCode == '37') {
+            bajarVolumen()
+        }
+        //Flecha derecha en Audio
+        else if (e.keyCode == '39') {
+            subirVolumen()
+        }
+    }else{
+        //Flecha abajo en video
+        if (e.keyCode == '40') {
+            bajarVolumenVid()
+        }
+        //Flecha arriba en video
+        else if (e.keyCode == '38') {
+            subirVolumenVid()
+        }
+        //Flecha izquierda en video
+        else if (e.keyCode == '37') {
+            document.getElementById("videoTag").currentTime = document.getElementById("videoTag").currentTime - 10;
+        }
+        //Flecha derecha en video
+        else if (e.keyCode == '39') {
+            document.getElementById("videoTag").currentTime = document.getElementById("videoTag").currentTime + 10;
+        }
+    }
+
+
+}
+
+document.addEventListener('keyleft', bajarVolumen);
+
 function bajarVolumen(){
     var audio = document.getElementById("audioSeleccionado");
     var spanVolumen = document.getElementById("porcentajeVolumen");
