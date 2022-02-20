@@ -25,6 +25,7 @@ body{
     padding: 0;
     flex-direction: column;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     header{
         display: flex;
@@ -75,7 +76,8 @@ body{
             justify-content: center;
             align-items: center;
             background-color: $third;
-            padding: 2rem;           
+            padding: 2rem;
+            overflow-x: hidden;           
             
             #tituloNav{
                 background-color: $tituloNav;
