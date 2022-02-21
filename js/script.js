@@ -371,3 +371,52 @@ function subirVolumenVid(){
     }
 
 }
+
+var opcionSub = document.getElementById('subtitulos');
+opcionSub.addEventListener('change', function(){
+    var track = document.createElement('track');
+    track.kind = "caption";
+    if(this.value == "en"){
+        var videoTag = document.getElementById("videoTag");
+        track = videoTag.addTextTrack("captions","English","en");
+        track.mode = "showing";
+        track.addCue(new VTTCue(0, 7, "English subtitles"));
+        track.addCue(new VTTCue(33, 36, "You got the lights on in the afternoon"));
+        track.addCue(new VTTCue(38, 41, "And the nights are drawn out long"));
+        track.addCue(new VTTCue(43, 47, "And you're kissin' to cut through the gloom"));
+        track.addCue(new VTTCue(48, 51, "With a cough drop coloured tongues"));
+        track.addCue(new VTTCue(53, 58, "And you were sittin' in the corner with the coats all piled high"));
+        track.addCue(new VTTCue(57, 60, "And I thought you might be mine"));
+        track.addCue(new VTTCue(63, 65, "In a small world, on an exceptionally rainy Tuesday night"));
+        track.addCue(new VTTCue(66, 68, "In the right place and time"));
+        track.addCue(new VTTCue(70, 72, "When the zeros line up on the 24 hour clock"));
+        track.addCue(new VTTCue(73, 75, "When you know who's callin' even though the number is blocked"));
+        track.addCue(new VTTCue(76, 79, "When you walked around your house wearin' my sky blue Lacoste"));
+        track.addCue(new VTTCue(80, 82, "And your knee socks"));
+        track.srclang = this.value;
+        track.addEventListener("load", function(){
+            this.mode = "showing";
+        });
+    }else{
+        var videoTag = document.getElementById("videoTag");
+        track = videoTag.addTextTrack("captions","English","en");
+        track.mode = "showing";
+        track.addCue(new VTTCue(0, 7, "Español subtitulos"));
+        track.addCue(new VTTCue(33, 36, "Tienes las luces encendidas en la tarde"));
+        track.addCue(new VTTCue(38, 41, "Y las noches son largas"));
+        track.addCue(new VTTCue(43, 47, "Y estás besando para atravesar la penumbra"));
+        track.addCue(new VTTCue(48, 51, "Con la lengua coloreada con pastillas para la tos"));
+        track.addCue(new VTTCue(53, 58, "Y estabas sentada en el rincón con todos los abrigos amontonados"));
+        track.addCue(new VTTCue(57, 60, "Y pensé que podrías ser mía"));
+        track.addCue(new VTTCue(63, 65, "En un mundo pequeño en una noche de martes"));
+        track.addCue(new VTTCue(66, 68, "excepcionalmente lluviosa"));
+        track.addCue(new VTTCue(70, 72, "Cuando los ceros se alinean en el reloj de 24 horas"));
+        track.addCue(new VTTCue(73, 75, "Cuando sabes quien llama aunque el número esté bloqueado"));
+        track.addCue(new VTTCue(76, 79, "Cuando caminabas por tu casa usando mi cielo azul"));
+        track.addCue(new VTTCue(80, 82, "Y tus calcetines hasta la rodilla"));
+        track.srclang = this.value;
+        track.addEventListener("load", function(){
+            this.mode = "showing";
+        });
+    }
+});
