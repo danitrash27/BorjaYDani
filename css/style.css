@@ -272,6 +272,7 @@ body main #audioSection #trackEntero .containerBtns #audioBtn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 body main #audioSection #trackEntero .containerBtns #videoBtn {
@@ -285,6 +286,7 @@ body main #audioSection #trackEntero .containerBtns #videoBtn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 body main #audioSection #trackEntero .containerBtns .audioSeleccionado {
@@ -449,6 +451,7 @@ body main #videoSection #videoEntero .containerBtns #audioBtnVid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 body main #videoSection #videoEntero .containerBtns #videoBtnVid {
@@ -462,6 +465,7 @@ body main #videoSection #videoEntero .containerBtns #videoBtnVid {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 body main #videoSection #videoEntero .containerBtns .audioSeleccionado {

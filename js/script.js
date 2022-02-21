@@ -61,6 +61,8 @@ function verVideo(){
         document.getElementById("videoEntero").style.display = "flex";
         videoSection.style.display = "flex";
         audioSection.style.display = "none";
+        btnPauseVid.style.display = "block";
+        btnPlayVid.style.display = "none";
         document.getElementById("audioSeleccionado").pause();
         document.getElementById("videoTag").load();
         document.getElementById("videoTag").play();
@@ -204,12 +206,19 @@ function cancionON(){
                 videoPrimeraPista.setAttribute('poster', e.img_url);
                 videoPrimeraPista.src = e.url_video;
                 
+                primeraPista.id = "pistaAudio";
+                pista.appendChild(primeraPista);
+                var pistaAudio = document.getElementById("pistaAudio");
+                pistaAudio.src= e.url_track;
 
                 var subtitulo =  document.createElement('track');
                 subtitulo.src = "../subtitulo/video-arctic.vtt";
                 subtitulo.kind = "captions";
                 subtitulo.lang = "es";
                 subtitulo.label = "Español";
+
+                btnPauseVid.style.display = "block";
+                btnPlayVid.style.display = "none";
 
                 //<track kind="subtitles" src="./subtitulo/video-arctic.vtt" lang="es" label="Español">
                 
